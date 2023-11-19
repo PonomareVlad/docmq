@@ -553,7 +553,7 @@ export class Queue<
     };
 
     // auto-start queue on next tick if not paused
-    process.nextTick(() => {
+    setTimeout(() => {
       if (isPaused()) {
         return;
       }
