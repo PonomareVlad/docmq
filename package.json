@@ -14,7 +14,7 @@
     "dpdm": "dpdm",
     "lint": "eslint .",
     "lint-staged": "lint-staged",
-    "prepare": "husky install",
+    "prepare": "husky install && run-s tsup",
     "rel": "release-it",
     "release:before:init": "run-s clean build test",
     "rev": "release-it --preRelease",
