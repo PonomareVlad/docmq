@@ -574,7 +574,7 @@ export class PgDriver extends BaseDriver<never, never, PGTransaction> {
     });
     try {
       const results = await client.query<QueueRow>(q, v);
-      if (results.rowCount < 1) {
+      if ((results.rowCount as number) < 1) {
         throw new DriverNoMatchingAckError(ack);
       }
     } catch (e) {
@@ -624,7 +624,7 @@ export class PgDriver extends BaseDriver<never, never, PGTransaction> {
 
     try {
       const results = await client.query<QueueRow>(q, v);
-      if (results.rowCount < 1) {
+      if ((results.rowCount as number) < 1) {
         throw new DriverNoMatchingAckError(ack);
       }
     } catch (e) {
@@ -720,7 +720,7 @@ export class PgDriver extends BaseDriver<never, never, PGTransaction> {
 
     try {
       const results = await client.query<QueueRow>(q, v);
-      if (results.rowCount < 1) {
+      if ((results.rowCount as number) < 1) {
         throw new DriverNoMatchingAckError(ack);
       }
     } catch (e) {
@@ -759,7 +759,7 @@ export class PgDriver extends BaseDriver<never, never, PGTransaction> {
 
     try {
       const results = await client.query<QueueRow>(q, v);
-      if (results.rowCount < 1) {
+      if ((results.rowCount as number) < 1) {
         throw new DriverNoMatchingRefError("ERR_UNKNOWN_ACK_OR_EXPIRED");
       }
     } catch (e) {
@@ -800,7 +800,7 @@ export class PgDriver extends BaseDriver<never, never, PGTransaction> {
     try {
       const results = await client.query<QueueRow>(q, v);
 
-      if (results.rowCount < 1) {
+      if ((results.rowCount as number) < 1) {
         throw new DriverNoMatchingRefError(ref);
       }
     } catch (e) {

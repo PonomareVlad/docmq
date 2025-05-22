@@ -76,8 +76,9 @@
   ],
   "engines": {
     "node": ">=14.19.0",
-    "pnpm": "7.x"
+    "pnpm": "*"
   },
+  "packageManager": "pnpm@9.4.0+sha1.9217c800d4ab947a7aee520242a7b70d64fc7638",
   "dependencies": {
     "@types/lokijs": "^1.5.7",
     "@types/pg": "^8",
